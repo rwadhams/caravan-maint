@@ -146,7 +146,8 @@ class CaravanMaintenanceApp {
 			String name = item.name
 			List<String> maintList = item.maint.collect {it.text()}
 			String frequency = item.frequency
-			cmiList << new CaravanMaintenanceItem(name : "$name", maint : maintList, frequency : Integer.parseInt(frequency))
+			String seq = item.seq
+			cmiList << new CaravanMaintenanceItem(name : "$name", maint : maintList, frequency : Integer.parseInt(frequency), seq : Integer.parseInt(seq))
 		}
 		
 		return cmiList

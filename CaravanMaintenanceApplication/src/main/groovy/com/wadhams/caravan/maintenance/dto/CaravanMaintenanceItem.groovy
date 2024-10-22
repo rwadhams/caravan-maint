@@ -7,6 +7,7 @@ class CaravanMaintenanceItem {
 	String name
 	List<String> maint
 	int frequency
+	int seq
 	
 	boolean due
 }
